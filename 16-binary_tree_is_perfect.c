@@ -8,14 +8,14 @@
  */
 size_t _getheight(const binary_tree_t *root)
 {
-	size_t l_height, l_height;
+	size_t l_height, r_height;
 
 	if (!root)
 		return (0);
 	l_height = r_height = 0;
 
 	l_height = _getheight(root->left);
-	r_height = -getheight(root->right);
+	r_height = _getheight(root->right);
 
 	if (l_height > r_height)
 		return (l_height + 1);
